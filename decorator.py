@@ -1,10 +1,10 @@
 import functools
 
-def tag_wrapper(tag):
-    def close_tag(tag):
-        # TODO closing tag
-        return tag
+def close_tag(tag):
+    # TODO closing tag
+    return tag
 
+def tag_wrapper(tag):
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
